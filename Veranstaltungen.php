@@ -9,12 +9,19 @@ class Veranstaltungen
     public $redner;
 
 
-    public function __construct($tag, $vName, $uhrzeitstart, $uhrzeitende, $redner)
+    public function Veranstaltungen($tag, $vName)
     {
-        $this->tag = $tag;
         $this->vName = $vName;
+    }
+
+    public function setTag($tag){
+        $this->tag = $tag;
+    }
+    public function setZeit($uhrzeitstart, $uhrzeitende){
         $this->uhrzeitstart = $uhrzeitstart;
         $this->uhrzeitende = $uhrzeitende;
+    }
+    public function setRedner($redner){
         $this->redner = $redner;
     }
 }

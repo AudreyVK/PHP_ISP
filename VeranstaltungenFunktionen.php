@@ -27,4 +27,12 @@ class VeranstaltungenFunktionen
             return $vName;
         }
     }
+
+    public static function printVeranstaltung($veranstaltungenTag){
+        $count = count($veranstaltungenTag);
+        for ($i = 0; $i < $count; $i++){
+            print($veranstaltungenTag[$i]);
+            echo "<br>";
+        }
+    }
 }
