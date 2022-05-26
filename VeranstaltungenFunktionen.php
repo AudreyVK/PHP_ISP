@@ -5,9 +5,9 @@ class VeranstaltungenFunktionen
     public static function ueberpruefeRedner($redner): string
     {
         $regEx = '/^[A-Z][^\d)(\/?=&%$§"!`\'#+*_:,;~<>|\\}\]\[{]{1,}$/u';
-        if (preg_match($regEx, $redner) == 0)
+        if (preg_match($regEx, $redner))
         {
-            return "Das ist nicht gültig!";
+            throw new Exception('Das ist nicht gültig!');
         }
         else
         {
@@ -18,9 +18,9 @@ class VeranstaltungenFunktionen
     public static function ueberpruefeVName($vName)
     {
         $regEx = '/^[A-Z][^\d)(\/?=&%$§"!`\'#+*_:.,;~<>|\\}\]\[{]{1,}$/u';
-        if (preg_match($regEx, $vName) == 0)
+        if (preg_match($regEx, $vName))
         {
-            return "Das ist nicht gültig!";
+            throw new Exception('Das ist nicht gültig!');
         }
         else
         {

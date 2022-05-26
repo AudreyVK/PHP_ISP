@@ -9,11 +9,14 @@ class Veranstaltungen
     public $redner;
 
 
-    public function Veranstaltungen($tag, $vName)
+    public function Veranstaltungen()
     {
-        $this->vName = $vName;
+        
     }
 
+    public function setName($vName){
+        $this->vName = $vName;
+    }
     public function setTag($tag){
         $this->tag = $tag;
     }

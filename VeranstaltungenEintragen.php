@@ -25,11 +25,12 @@ if(isset($_POST['vName'])) {
     $vNameChecked = VeranstaltungenFunktionen::ueberpruefeVName($vName);
     $rednerChecked = VeranstaltungenFunktionen::ueberpruefeRedner($redner);
     
-    /*if ($rednerChecked === $redner && $vNameChecked === $vName)
-    {*/
+    if ($rednerChecked === $redner && $vNameChecked === $vName)
+    {
         $jsonDaten = file_get_contents("Veranstaltung.json");
         $anfangJson = json_decode($jsonDaten, true);
-        $veranstaltung = new Veranstaltungen("$vName");
+        $veranstaltung = new Veranstaltungen();
+        $veranstaltung->setName("$vName");
         $veranstaltung->setTag("$tag");
         $veranstaltung->setZeit("$uhrzeitStart","$uhrzeitEnde");
         $veranstaltung->setRedner("$redner");
@@ -42,7 +43,7 @@ if(isset($_POST['vName'])) {
         file_put_contents("Veranstaltung.json", $jsonVeranstaltung, FILE_APPEND);
 
         
-    //}
+    }
 }
 echo "<br><br> <a href='../IndexEA3.php'>Zurück zur Startseite</a>";
 ?>
