@@ -1,0 +1,51 @@
+{
+  "tagungsname": "Agile Software Days",
+  "begruessungstext": "Herzlich Willkommen zum Tagungsprogramm",
+  "raumname": "T-Foyer",
+  "tag1": "21.03.2022",
+  "tag2": "22.03.2022",
+  "veranstaltungen": {
+    "0": {
+      "tag": "1",
+      "uhrzeitstart": "09:00",
+      "uhrzeitende": "09:30",
+      "vName": "Eröffnung der Tagung",
+      "redner": "Prof. Dr. Kaiser und Prof. Dr. König"
+    },
+    "1": {
+      "tag": "1",
+      "uhrzeitstart": "09:00",
+      "uhrzeitende": "09:30",
+      "vName": "Eröffnung der Tagung",
+      "redner": "Prof. Dr. Kaiser und Prof. Dr. König"
+    },
+    "2": {
+      "tag": "1",
+      "uhrzeitstart": "09:30",
+      "uhrzeitende": "10:30",
+      "vName": "Beyond the Future",
+      "redner": "Prof. Dr. Kaiser und Prof. Dr. König"
+    },
+    "3": {
+      "tag": "2",
+      "uhrzeitstart": "09:30",
+      "uhrzeitende": "10:30",
+      "vName": "Beyond the Future",
+      "redner": "Prof. Dr. Kaiser und Prof. Dr. König"
+    },
+    "4": {
+      "tag": "2",
+      "uhrzeitstart": "09:30",
+      "uhrzeitende": "10:30",
+      "vName": "Beyond the Future",
+      "redner": "Prof. Dr. Kaiser und Prof. Dr. König"
+    },
+    "5": {
+      "tag": "2",
+      "uhrzeitstart": "09:30",
+      "uhrzeitende": "10:30",
+      "vName": "Beyond the Future",
+      "redner": "Prof. Dr. Kaiser und Prof. Dr. König"
+    }
+  }
+}
