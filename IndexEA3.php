@@ -4,7 +4,7 @@
  * Hier wird die Uebersicht ueber die Tagungen ausgegeben.
  * @author Audrey Klecha, 334530
  */
-require "VeranstaltungenFunktionen.php";
+
 /**
  * Funktion zum Schreiben des HTML Headers und Titels
  * @return void
@@ -35,7 +35,6 @@ $veranstaltungenTag2 = array();
 
 if(isset($anfangJson['veranstaltungen'])){
     $count = count($anfangJson['veranstaltungen']);
-    
     for ($i = 0; $i < $count; $i++){
 
         $tag = $anfangJson['veranstaltungen']["$i"]['tag'];
@@ -44,7 +43,7 @@ if(isset($anfangJson['veranstaltungen'])){
         $redner =$anfangJson['veranstaltungen']["$i"]['redner'];
         $vName = $anfangJson['veranstaltungen']["$i"]['vName'] ;
         $veran = $uhrzeitStart . " - " . $uhrzeitEnde . " " . $vName . ", "  . $redner;
-        
+
         if($tag == "1"){
             array_push($veranstaltungenTag1, $veran);
         }elseif ($tag == "2"){
@@ -52,6 +51,11 @@ if(isset($anfangJson['veranstaltungen'])){
         }
     }
 }
+//print_r($anfangJson);
+
+//$redner[] = [];
+//$uhrzeiten[] = [];
+//$veranstaltungsname[] = [];
 
 /**
  * Anfang des Hauptprogramms
@@ -65,15 +69,22 @@ echo "Die Tagung findet am  $tag1  &  $tag2  im  $raumname  statt. <br><br>";
 
 echo "Veranstaltungen am $tag1 <br>";
 
-VeranstaltungenFunktionen::printVeranstaltung($veranstaltungenTag1);
-
+$count = count($veranstaltungenTag1);
+for ($i = 0; $i < $count; $i++){
+    print($veranstaltungenTag1[$i]);
+    echo "<br>";
+}
 echo "<br>";
 echo "<a href=\"veranstaltungenEintragen.php/?id=1\">Veranstaltungen für Tag 1 eintragen.</a><br>";
 echo "<br>";
 echo "<br>";
 echo "Veranstaltungen am $tag2 <br>";
 
-VeranstaltungenFunktionen::printVeranstaltung($veranstaltungenTag2);
+$count = count($veranstaltungenTag2);
+for ($i = 0; $i < $count; $i++){
+    print($veranstaltungenTag2[$i]);
+    echo "<br>";
+}
 
 echo "<br><a href=\"veranstaltungenEintragen.php/?id=2\">Veranstaltungen für Tag 2 eintragen.</a>";
 ?>
